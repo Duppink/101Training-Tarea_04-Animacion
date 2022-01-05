@@ -6,6 +6,7 @@ public class ActivateLight : MonoBehaviour
 {
     public Animator lightt;
     public Animator littleBoy;
+    public Animator player;
     
     
     private void OnTriggerEnter(Collider p) { 
@@ -14,6 +15,7 @@ public class ActivateLight : MonoBehaviour
     {
         lightt.SetBool("Susto", true);
             littleBoy.SetBool("Susto", true);
+                player.SetBool("Asustando", true);
     }
 
     }
@@ -25,6 +27,7 @@ public class ActivateLight : MonoBehaviour
     {
         lightt.SetBool("Susto", false);
             littleBoy.SetBool("Susto", false);
+                player.SetBool("Asustando", false);
         }
 
     }

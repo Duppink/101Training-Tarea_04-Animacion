@@ -6,6 +6,7 @@ public class ActivateBall : MonoBehaviour
 {
     public Animator ball;
     public Animator grandMa;
+    public Animator player;
 
 
     private void OnTriggerEnter(Collider p)
@@ -14,7 +15,8 @@ public class ActivateBall : MonoBehaviour
         if (p.tag == "Player")
         {
             ball.SetBool("Susto", true);
-            grandMa.SetBool("Susto", true);
+                grandMa.SetBool("Susto", true);
+                    player.SetBool("Asustando", true);
         }
 
     }
@@ -26,7 +28,8 @@ public class ActivateBall : MonoBehaviour
         if (p.tag == "Player")
         {
             ball.SetBool("Susto", false);
-            grandMa.SetBool("Susto", false);
+                grandMa.SetBool("Susto", false);
+                    player.SetBool("Asustando", false);
         }
 
     }
